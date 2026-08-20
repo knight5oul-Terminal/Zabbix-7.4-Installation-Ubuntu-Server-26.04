@@ -10,21 +10,26 @@ make sure that these commands assume the server is freshly installed with nothin
 1) Preapring the ubuntu server
 
 ```bash
-sudo apt update 
+sudo apt update
+```
 
 2) Optional but recommended
 
 ```bash
 sudo apt upgrade -y
+```
 
 3) Installing the Apache2 webhost
 
 ```bash
 sudo apt install -y apache2
+```
 
 ```bash
 sudo systemctl enable apache2
+```
 
 ```bash
 sudo systemctl status apache2
+```
 
