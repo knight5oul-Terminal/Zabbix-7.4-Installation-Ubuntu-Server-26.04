@@ -1,7 +1,5 @@
 # Full Installation Steps To Install Zabbix 7.4 In Ubuntu Server 26.04
-So here we are guys oficially, I wont be commenting a lot just when its necessary, I have made the installation commands in order below, 
-make sure that these commands assume the server is freshly installed with nothing already configured. 
-
+So here we are, guys, officially. I won't be commenting a lot, just when it's necessary. I have made the installation commands in order below. Make sure that these commands assume the server is freshly installed with nothing already configured.
 
 ### System Preparation
 
@@ -75,7 +73,7 @@ php -v
 sudo nano /etc/php/8.5/apache2/php.ini
  ```
 
-You can use CTRL + W to find the text inside the nano editor. We have to find the following 4 lines and ensure the values are as following:
+You can use CTRL + W to find the text inside the nano editor. We have to find the following 5 lines and ensure the values are as following:
 
 max_execution_time = 300
 max_input_time = 300
@@ -188,10 +186,14 @@ sudo a2enmod proxy proxy_http proxy_fcgi
 23) Alright now we can finally restart all the services
 
 ```bash
+sudo systemctl enable --now zabbix-server zabbix-agent2
+```
+
+```bash
 sudo systemctl restart apache2 zabbix-server zabbix-agent2
 ```
 
 
-## With all services restarted, your Zabbix server is fully operational at least I hope so.
+## With all services restarted, your Zabbix server should now be operational.
 
 
