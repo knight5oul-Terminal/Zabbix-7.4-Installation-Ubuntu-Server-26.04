@@ -1,11 +1,11 @@
 # Full Installation Steps To Install Zabbix 7.4 In Ubuntu Server 26.04
-So here we are guys officialy, I wont be commenting a lot just when its necssary, I have made the installation commands in order below, 
+So here we are guys oficially, I wont be commenting a lot just when its necessary, I have made the installation commands in order below, 
 make sure that these commands assume the server is freshly installed with nothing already configured. 
 
 
 ### System Preparation
 
-1) Preapring the ubuntu server
+1) Preparing the ubuntu server
 
 ```bash
 sudo apt update
@@ -55,7 +55,7 @@ sudo systemctl enable --now mysql
 sudo systemctl status mysql
 ```
 
-### PHP and required extenions
+### PHP and required extensions
 
 9) Installing PHP 8.5 && Extensions
 
@@ -81,7 +81,7 @@ max_execution_time = 300
 max_input_time = 300
 memory_limit = 138M
 post_max_size = 16M
-upload_max_size = 2M
+upload_max_filesize = 2M
 
 
 
@@ -144,7 +144,7 @@ mysql> quit;
 
 19) Hosting the initial database on Zabbix Server
 
-note: Here put the password you selected in the previous part, I accidentaly forgot to change password so for my my password is just password
+note: Here put the password you selected in the previous part, I accidentally forgot to change password so for my my password is just password
 
 ```bash
 sudo zcat /usr/share/zabbix/sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
