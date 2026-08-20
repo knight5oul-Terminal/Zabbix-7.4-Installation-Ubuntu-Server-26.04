@@ -60,7 +60,7 @@ sudo systemctl status mysql
 9) Installing PHP 8.5 && Extensions
 
 ```bash
-sudo apt install -y php php-cli php-common php-mysql php-bcmath php-mbstring php-dg php-xml php-curl php-zip php-ldap libapache2-mod-php
+sudo apt install -y php php-cli php-common php-mysql php-bcmath php-mbstring php-gd php-xml php-curl php-zip php-ldap libapache2-mod-php
  ```
 
 10) Verifying the PHP Installation
